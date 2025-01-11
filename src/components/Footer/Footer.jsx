@@ -1,7 +1,7 @@
-import img1 from "../img/footer-contactos/instagram.png"
-import img2 from "../img/footer-contactos/facebook.png"
-import img3 from "../img/footer-contactos/whatsapp.png"
-import img4 from "../img/footer-contactos/x.png"
+import img1 from "../../img/footer-contactos/instagram.png";
+import img2 from "../../img/footer-contactos/facebook.png"
+import img3 from "../../img/footer-contactos/whatsapp.png"
+import img4 from "../../img/footer-contactos/x.png"
 
 const Footer = () => {
   return (

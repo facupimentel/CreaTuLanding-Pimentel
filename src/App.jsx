@@ -1,25 +1,36 @@
-import NavBar from "./components/NavBar"
+import Header from "./components/Header/Header";
+import Inicio from "./components/Inicio/Inicio";
+import MainProductos from "./components/Productos/MainProductos";
+import Footer from "./components/Footer/Footer";
 
-import ItemListContainer from "./components/ItemListContainer"
-import { useState } from "react"
-import Footer from "./components/Footer"
 
+
+import {
+  BrowserRouter as Router,
+  Route,
+  BrowserRouter,
+  Routes,
+} from "react-router-dom";
 
 
 function App() {
-  const [totalProductos, setTotalProductos] = useState(0)
-
-  const agregarAlCarrito = ()=>{
-    setTotalProductos(totalProductos + 1)
-  }
+  
+  
 
   return (
     <>
-      <NavBar totalProductos={totalProductos} />
-      <ItemListContainer agregarAlCarrito={agregarAlCarrito}/>
-      <Footer/>
+      <BrowserRouter>
+        <Header/>
+
+        <Routes>
+          <Route path='/' element={<Inicio/>} />
+          <Route path='/productos' element={<MainProductos/>} />
+        </Routes>
+
+        <Footer/>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
